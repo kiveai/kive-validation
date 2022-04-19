@@ -2,9 +2,10 @@
   "name": "kive-validation",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/kiveai/kive-validation/issues"
   },
-  "homepage": "https://github.com/kiveai/kive-validation#readme"
+  "homepage": "https://github.com/kiveai/kive-validation#readme",
+  "dependencies": {
+    "ts-node": "10.7.0",
+    "yup": "0.32.11"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.20.0",
+    "@typescript-eslint/parser": "5.20.0",
+    "eslint": "8.13.0",
+    "jest": "27.5.1",
+    "typescript": "4.6.3"
+  }
 }
