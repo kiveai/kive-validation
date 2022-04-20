@@ -1,4 +1,4 @@
-import * as Validator from '../index'
+import * as Validator from '../validations'
 test('Should be able to pass firstName validation', () => {
     Validator.validateFirstName('Martin')
     .then((res) => expect(res).toBeTruthy())
