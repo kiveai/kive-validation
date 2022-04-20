@@ -1,11 +1,15 @@
 {
-  "compilerOptions":
-    {
-      "target": "es2018",
-      "module": "commonjs",
-      "outDir": "dist",
-      "sourceMap": true
-    },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "compilerOptions" : {
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017",
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "lib": ["ES2020"],
+    "resolveJsonModule": true
+  }
 }
