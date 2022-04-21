@@ -1,15 +1,12 @@
 {
-  "compilerOptions" : {
-    "target": "esnext",
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es5",
     "module": "commonjs",
-    "noImplicitReturns": true,
-    "noUnusedLocals": false,
-    "sourceMap": true,
-    "strict": true,
+    "declaration": true,
+    "outDir": "lib",
     "esModuleInterop": true,
-    "noImplicitAny": true,
     "skipLibCheck": true,
-    "lib": ["ES2020"],
-    "resolveJsonModule": true
+    "forceConsistentCasingInFileNames": true
   }
 }
