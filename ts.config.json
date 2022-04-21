@@ -1,11 +1,11 @@
 {
   "compilerOptions" : {
+    "target": "esnext",
     "module": "commonjs",
     "noImplicitReturns": true,
     "noUnusedLocals": false,
     "sourceMap": true,
     "strict": true,
-    "target": "es2017",
     "esModuleInterop": true,
     "noImplicitAny": true,
     "skipLibCheck": true,
