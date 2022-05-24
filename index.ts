@@ -1,18 +1,26 @@
 import * as yup from 'yup'
+import { BIO_MAX_LENGTH, FIRST_NAME_MAX_LENGTH, FIRST_NAME_MIN_LENGTH, LAST_NAME_MAX_LENGTH, LAST_NAME_MIN_LENGTH } from './consts'
 
+export const Constants = {
+    FIRST_NAME_MAX_LENGTH,
+    FIRST_NAME_MIN_LENGTH,
+    LAST_NAME_MAX_LENGTH,
+    LAST_NAME_MIN_LENGTH,
+    BIO_MAX_LENGTH,
+}
 
 export const validateFirstName = (firstName: string): Promise<true> => {
     return yup.string()
-        .min(2, 'First name must be at least 2 characters long')
-        .max(30, 'First name must be less than 30 characters long')
+        .min(FIRST_NAME_MIN_LENGTH, 'First name must be at least 2 characters long')
+        .max(FIRST_NAME_MAX_LENGTH, 'First name must be less than 30 characters long')
         .validate(firstName)
         .then(() => true)
 }
 
 export const validateLastName = (lastName: string): Promise<true> => {
     return yup.string()
-        .min(2, 'Last name must be at least 2 characters long')
-        .max(30, 'Last name must be less than 30 characters long')
+        .min(LAST_NAME_MIN_LENGTH, 'Last name must be at least 2 characters long')
+        .max(LAST_NAME_MAX_LENGTH, 'Last name must be less than 30 characters long')
         .validate(lastName)
         .then(() => true)
 }
@@ -26,7 +34,7 @@ export const validateEmail = (email: string): Promise<true> => {
 
 export const validateBio = (bio: string): Promise<true> => {
     return yup.string()
-        .max(255, 'Bio must be less than 255 characters long')
+        .max(BIO_MAX_LENGTH, 'Bio must be less than 255 characters long')
         .validate(bio)
         .then(() => true)
 }
