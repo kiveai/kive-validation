@@ -36,5 +36,5 @@ test('Should be able to pas bio validation', () => {
 
 test('Should be able to fail bio validation', () => {
     Validator.validateBio('')
-    .catch((error) => expect(error.message).toBe('Email must be valid'))
+    .catch((error) => expect(error.message).toBe('Bio must be valid'))
 })
